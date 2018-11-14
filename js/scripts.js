@@ -804,3 +804,12 @@
     };
     // END MOUSEMOVE / GYRO 
 
+
+
+    $('.about_trigger').click(function() {
+        $('.about').show();
+    });
+
+    $('.about_close').click(function() {
+        $('.about').hide();
+    });
