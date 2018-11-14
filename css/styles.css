@@ -42,7 +42,7 @@ body {
 
 /** hide fps + gui **/
 .dg.main.a, .fps {
-  /*display: none;*/
+  display: none;
 }
 html * {
   cursor: none
