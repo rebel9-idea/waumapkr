@@ -170,6 +170,11 @@
 
         animate();
 
+        setTimeout(function(){ 
+            $('.loading').fadeOut() 
+        }, 2000);
+
+
     };
     // END init()
 
