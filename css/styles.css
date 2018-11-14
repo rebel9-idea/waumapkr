@@ -86,7 +86,7 @@ html * {
   top: 0;
   left: 0;
   bottom: 0;	
-  overflow-y: scroll;
+  overflow: hidden;
   display: block;
   width: 100vw;
   box-sizing: border-box;
@@ -188,9 +188,9 @@ html * {
   color: white;
   border-radius: 50%;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
+  /*-moz-backface-visibility: hidden;*/
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
+  /*-moz-transform: translate3d(0, 0, 0);*/
   overflow: hidden;
   transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
 }

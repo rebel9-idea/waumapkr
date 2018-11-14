@@ -56,6 +56,7 @@
         setTimeout(function(){ 
             // $('.floating-button video')[0].play();
             $('.floating-button video').each(function() {
+                $(this).get(0).load();
                 $(this).get(0).play();
             });
         }, 2000);
