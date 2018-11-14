@@ -51,102 +51,99 @@ html * {
 /***/
 
 .layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;	
-    overflow-y: scroll;
-    display: block;
-	width: 100vw;
-	box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;	
+  overflow-y: scroll;
+  display: block;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 .layer2 {
-	width: 30vw;
-    z-index: 2;
-    transform: translateX(0vw);
-    transform-origin: left;
-    pointer-events: none;
+  width: 35vw;
+  z-index: 2;
+  transform: translateX(0vw);
+  transform-origin: left;
+  pointer-events: none;
 }
 .layer2::-webkit-scrollbar {
 	display: none;
 }
 
 .layer .inner_wrap {
-    position: relative;
-    width: 100%;
-    height: 100px;
+  position: relative;
+  width: 100%;
+  height: 100px;
 }
 .layer2 .inner_wrap {
-    width: 100vw;
-    transform: translateX(-30vw);
+  width: 100vw;
+  transform: translateX(-30vw);
 }
 
 .layer .inner_2 {
-    float: right;
+  float: right;
 }
 .layer img, .layer video {
-	width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    /*filter: invert(1) contrast(3);*/
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 
 #prompt {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    top: 50%;
-    margin: -20px 0 0 0;
-    font-size: 24px;
-    font-weight:300;
-    color: #fff;
-    display: none;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: 50%;
+  margin: -20px 0 0 0;
+  font-size: 24px;
+  font-weight:300;
+  color: #fff;
+  display: none;
 }
 #container{
-    -webkit-filter: contrast(1);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left: 0;
-    z-index: 2;
+  -webkit-filter: contrast(1);
+  filter: contrast(1);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  z-index: 2;
 }
 .dg.ac {
     z-index: 3 !important;
 }
 .openBtn{
-    background: url("../img/open.png");
-    background-size: 20px;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    margin: 9px;
+  background: url("../img/open.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin: 9px;
 }
-
-
-
 
 /*** physics **/
 
 #buttonsViewport {
-    position: fixed;
-    top:0;
-    left:0;
-    z-index: 1;
-    pointer-events: none;
-    transition: 0.2s ease-in-out background-color;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 1;
+  pointer-events: none;
+  transition: 0.2s ease-in-out background-color;
 }
 .floating-button {
   background-color: whitesmoke;
   box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.4);
-  width: 6vw;
-  height: 6vw;
-  margin-top: -3vw;
-  margin-left: -3vw;
+  width: 9vw;
+  height: 9vw;
+  margin-top: -4.5vw;
+  margin-left: -4.5vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -160,9 +157,9 @@ html * {
   color: white;
   border-radius: 50%;
   -webkit-backface-visibility: hidden;
- -moz-backface-visibility: hidden;
- -webkit-transform: translate3d(0, 0, 0);
- -moz-transform: translate3d(0, 0, 0);
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
   overflow: hidden;
   transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
 }
@@ -176,39 +173,39 @@ html * {
   /*display: none;*/
 }
 #buttonsViewport.bg1 {
-    /*background-color: #00ffe4;*/
-    background-image: url(../media/bg_trans_grid.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  /*background-color: #00ffe4;*/
+  background-image: url(../media/bg_trans_grid.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #buttonsViewport.bg2 {
-    background-color: #3b02cb;
+  background-color: #3b02cb;
 }
 #buttonsViewport.bg3 {
-    background-color: #f4d804;
+  background-color: #f4d804;
 }
 #buttonsViewport.bg4 {
-    background-color: #d50f02;
+  background-color: #d50f02;
 }
 
 .floating-button.bg1 {
-    background-color: #fc0e27;
-    box-shadow: 0 1px 50px rgba(61, 88, 237, 0.84);
+  background-color: #fc0e27;
+  box-shadow: 0 1px 50px rgba(61, 88, 237, 0.84);
 
 }
 .floating-button.bg2 {
-    background-color: #c4fd34;
-    box-shadow: 0 1px 50px rgba(237, 61, 61, 0.84);
-    color: black;
+  background-color: #c4fd34;
+  box-shadow: 0 1px 50px rgba(237, 61, 61, 0.84);
+  color: black;
 }
 .floating-button.bg3 {
-    background-color: #0b27fb;
-    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.4);
+  background-color: #0b27fb;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
 .floating-button.bg4 {
-    background-color: #2af0fd;
-    box-shadow: 5px 10px 10px 0px rgba(59, 2, 203, 0.8);
-    color:black;
+  background-color: #2af0fd;
+  box-shadow: 5px 10px 10px 0px rgba(59, 2, 203, 0.8);
+  color:black;
 }
 
 
@@ -238,29 +235,28 @@ html * {
   /*background-color: black;*/
 }
 .year_alert span, .address_alert span {
-    color: white;
-    padding: 1vw 2vw;
-    vertical-align: text-top;
-    text-align: center;
+  color: white;
+  padding: 1vw 2vw;
+  vertical-align: text-top;
+  text-align: center;
 }
 
 
 @media only screen and (max-width: 667px){
-    .layer2 {
-        transform: translateX(50vw);
+  
+  .layer2 {
+    transform: translateX(50vw);
+  }
 
-    }
+  .layer2 .inner_wrap {
+    transform: translateX(-50vw);
+  }
 
-    .layer2 .inner_wrap {
-        transform: translateX(-50vw);
-    }
-
-    .floating-button {
-      width: 12vw;
-      height: 12vw;
-      margin-top: -6vw;
-      margin-left: -6vw;
-    }
-
+  .floating-button {
+    width: 15vw;
+    height: 15vw;
+    margin-top: -7.5vw;
+    margin-left: -7.5vw;
+  }
 
 }

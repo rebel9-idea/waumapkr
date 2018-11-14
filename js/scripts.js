@@ -70,7 +70,7 @@
         gui = new dat.GUI();
         // gui.add(params, 'zoom', 0.1, 5).name('Zoom').onChange(onParamsChange);
         gui.add(params, 'mOpac', 0, 1).name('Mesh Opacity').onChange(onParamsChange);
-        gui.add(params, 'wfOpac', 0, 0.3).name('Grid Opacity').onChange(onParamsChange);
+        gui.add(params, 'wfOpac', 0, 0.025).name('Grid Opacity').onChange(onParamsChange);
         gui.add(params, 'contrast', 1, 5).name('Contrast').onChange(onParamsChange);
         gui.add(params, 'saturation', 0, 2).name('Saturation').onChange(onParamsChange);
         gui.add(params, 'zDepth', 0, 1000).name('Z Depth');
@@ -93,7 +93,7 @@
         if (window.innerWidth > window.innerHeight) {
             camera.position.z = 800;
         } else {
-            camera.position.z = 1200;
+            camera.position.z = 1100;
         }
 
         //init depthmap texture
@@ -350,7 +350,7 @@
     function WCMParams() {
         // this.zoom = 1;
         this.mOpac = 1;
-        this.wfOpac = 0.05;
+        this.wfOpac = 0.025;
         this.contrast = 1;
         this.saturation = 1;
         this.invertZ = true;
@@ -540,12 +540,12 @@
 
         // vw unit to px conversion
         if (window.innerWidth > window.innerHeight) {
-            vw_to_px = window.innerWidth * (3 / 100);
+            vw_to_px = window.innerWidth * (5 / 100);
             var v1 = 0.5
             var v2 = 0.4
             var v3 = 0.3
         } else {
-            vw_to_px = window.innerWidth * (6 / 100);
+            vw_to_px = window.innerWidth * (7.5 / 100);
             var v1 = 0.2
             var v2 = 0.25
             var v3 = 0.15
@@ -702,13 +702,17 @@
         if (window.innerWidth > window.innerHeight) {
             camera.position.z = 800;
         } else {
-            camera.position.z = 1200;
+            camera.position.z = 1100;
         }
 
         // PHYSICSJS resize events
         // as of 0.7.0 the renderer will auto resize. so we just take the values from the renderer
         if (py_world != undefined) {
-            vw_to_px = window.innerWidth * (3 / 100);
+            if (window.innerWidth > window.innerHeight) {
+                vw_to_px = window.innerWidth * (5 / 100);
+            } else {
+                vw_to_px = window.innerWidth * (7.5 / 100);
+            }
             //console.log(vw_to_px)
 
             py_renderer.el.width = window.innerWidth;
@@ -734,7 +738,7 @@
     // MOUSE / GYRO INTERACTIONS
     if (window.orientation == undefined) {
             
-        var vw_size = 70;
+        var vw_size = 65;
 
         $(document).mousemove(function(getCurrentPos, event){
             /* the following offset is half of width of image, currently 25vw */
@@ -785,8 +789,8 @@
         // shift left/right video mask according to device orientation
         var converted_val = ((gamma - -100) * 100) / (100 - -100);
         //console.log('a:'+gamma, converted_val)
-        $('.layer2').css('transform', 'translateX(' + converted_val + 'vw)');
-        $('.layer2 .inner_wrap').css('transform', 'translateX(-' + converted_val + 'vw)'); 
+        $('.layer2').css('transform', 'translateX(' + (converted_val - 15) + 'vw)');
+        $('.layer2 .inner_wrap').css('transform', 'translateX(-' + (converted_val - 15) + 'vw)'); 
 
 
         // values for tilting left/right up/down threejs with device orientation
