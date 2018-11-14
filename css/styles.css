@@ -176,7 +176,10 @@ html * {
   /*display: none;*/
 }
 #buttonsViewport.bg1 {
-    background-color: #00ffe4;
+    /*background-color: #00ffe4;*/
+    background-image: url(../media/bg_trans_grid.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #buttonsViewport.bg2 {
     background-color: #3b02cb;
@@ -210,29 +213,39 @@ html * {
 
 
 
-.year_alert {
-  /*display: none;*/
+.year_alert, .address_alert {
+  display: none;
   font-family: 'Ginto Nord';
-  font-size: 10vw;
-  font-weight: 900;
   position: fixed;
   top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 99;
   /*background-color: black;*/
-
 }
-.year_alert span {
+.year_alert {
+  font-size: 10vw;
+  font-weight: 900;
+  /*display: none !important;*/
+}
+.address_alert {
+  /*display: block !important;*/
+  font-size: 5vw;
+  font-weight: 900;
+  text-align: center;
+  word-break: keep-all;
+  width: 100%;
+  /*background-color: black;*/
+}
+.year_alert span, .address_alert span {
     color: white;
     padding: 1vw 2vw;
     vertical-align: text-top;
+    text-align: center;
 }
 
 
 @media only screen and (max-width: 667px){
-
-
     .layer2 {
         transform: translateX(50vw);
 
@@ -242,15 +255,12 @@ html * {
         transform: translateX(-50vw);
     }
 
-.floating-button {
-  background-color: whitesmoke;
-  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.4);
-  width: 12vw;
-  height: 12vw;
-  border-radius: 50%;
-  margin-top: -6vw;
-  margin-left: -6vw;
-}
+    .floating-button {
+      width: 12vw;
+      height: 12vw;
+      margin-top: -6vw;
+      margin-left: -6vw;
+    }
 
 
 }

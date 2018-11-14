@@ -4,6 +4,7 @@
 
             { 
                 "place": "0_wausanro_100", 
+                "address": "100 Wausan-ro", 
                 "video": "wausanro_100_video.mp4",
                 "year":  [
                             { 
@@ -56,6 +57,7 @@
 
             { 
                 "place": "1_hongikro_3", 
+                "address": "3 Hongik-ro", 
                 "video": "hongikro_3_video.mp4",
                 "year":  [
                             { 
@@ -108,6 +110,7 @@
 
             { 
                 "place": "2_hongikro_20", 
+                "address": "20 Hongik-ro",
                 "video": "hongikro_20_video.mp4",
                 "year":  [
                             { 
@@ -160,6 +163,7 @@
 
             { 
                 "place": "3_yanghwaro_134", 
+                "address": "134 Yanghwa-ro",
                 "video": "yanghwaro_134_video.mp4",
                 "year":  [
                             { 
@@ -213,6 +217,7 @@
 
             { 
                 "place": "4_yanghwaro_136", 
+                "address": "136 Yanghwa-ro",
                 "video": "yanghwaro_136_video.mp4",
                 "year":  [
                             { 
@@ -265,6 +270,7 @@
 
             { 
                 "place": "5_yanghwaro_140", 
+                "address": "140 Yanghwa-ro",
                 "video": "yanghwaro_140_video.mp4",
                 "year":  [
                             { 
@@ -317,6 +323,7 @@
 
             { 
                 "place": "6_yanghwaro_152", 
+                "address": "152 Yanghwa-ro",
                 "video": "yanghwaro_152_video.mp4",
                 "year":  [
                             { 
@@ -369,6 +376,7 @@
 
             { 
                 "place": "7_yanghwaro_152-6", 
+                "address": "152-6 Yanghwa-ro",
                 "video": "yanghwaro_152-6_video.mp4",
                 "year":  [
                             { 
@@ -423,6 +431,7 @@
 
             { 
                 "place": "8_yanghwaro_156", 
+                "address": "156 Yanghwa-ro",
                 "video": "yanghwaro_156_video.mp4",
                 "year":  [
                             { 

@@ -5,10 +5,11 @@
     var year_index = 0;
     // all_data[0].year[0].images[0]
     var current_year = all_data[place_index].year[year_index].year_num;
+    var current_address = all_data[place_index].address;
     var zdepth_isgoingup = true;
     var collide_count_single_year = 0;
     var year_rounds_completed = 0;
-    var show_year_timeout;
+    var show_year_timeout, show_address_timeout;
     var ready_to_change = true;
 
     /*** THREEJS ***/ 
@@ -217,7 +218,7 @@
     };
     // END change_texture
 
-    //FN update year_num
+    //FN update year_num and flash it
     function update_year_num() {
         current_year = all_data[place_index].year[year_index].year_num;
         // $('.button3 .floating-button').html(current_year.charAt(2));
@@ -232,6 +233,20 @@
 
     };
     // END update_year_num();
+
+    // flash address
+    function update_address() {
+        current_address = all_data[place_index].address
+
+        $('.address_alert span').html(current_address);
+        $('.address_alert').show();
+        clearTimeout(show_address_timeout);
+        show_address_timeout = setTimeout(function(){ 
+                                $('.address_alert').hide() 
+                            }, 1000);
+
+    };
+    // END
 
 
     // FN get next year
@@ -251,6 +266,7 @@
 
     // FN get next place 
     function next_place() {
+
         year_index = 0;
 
         setTimeout(function(){ 
@@ -282,6 +298,8 @@
             $('.layer2 video')[0].play();
             $('.layer2').fadeIn();
         });
+
+        update_address()
     }
     // END next_place();
 
@@ -523,14 +541,14 @@
         // vw unit to px conversion
         if (window.innerWidth > window.innerHeight) {
             vw_to_px = window.innerWidth * (3 / 100);
-            var v1 = 1.2
-            var v2 = 0.7
-            var v3 = 1
+            var v1 = 0.5
+            var v2 = 0.4
+            var v3 = 0.3
         } else {
             vw_to_px = window.innerWidth * (6 / 100);
-            var v1 = 0.03
-            var v2 = 0.075
-            var v3 = 0.05
+            var v1 = 0.2
+            var v2 = 0.25
+            var v3 = 0.15
         }
         
         // console.log(vw_to_px)
@@ -621,34 +639,34 @@
                         // change year on each collide
                         next_year();
 
-                        if ($('.floating-button').hasClass('bg1')) {
-                            $('.floating-button').removeClass('bg1');
-                            $('.floating-button').addClass('bg2');
+                        // if ($('.floating-button').hasClass('bg1')) {
+                        //     $('.floating-button').removeClass('bg1');
+                        //     $('.floating-button').addClass('bg2');
 
-                            $('#buttonsViewport').removeClass('bg1');
-                            $('#buttonsViewport').addClass('bg2');
-                        } 
-                        else if ($('.floating-button').hasClass('bg2')) {
-                            $('.floating-button').removeClass('bg2');
-                            $('.floating-button').addClass('bg3');
+                        //     $('#buttonsViewport').removeClass('bg1');
+                        //     $('#buttonsViewport').addClass('bg2');
+                        // } 
+                        // else if ($('.floating-button').hasClass('bg2')) {
+                        //     $('.floating-button').removeClass('bg2');
+                        //     $('.floating-button').addClass('bg3');
 
-                            $('#buttonsViewport').removeClass('bg2');
-                            $('#buttonsViewport').addClass('bg3');
-                        }
-                        else if ($('.floating-button').hasClass('bg3')) {
-                            $('.floating-button').removeClass('bg3');
-                            $('.floating-button').addClass('bg4');
+                        //     $('#buttonsViewport').removeClass('bg2');
+                        //     $('#buttonsViewport').addClass('bg3');
+                        // }
+                        // else if ($('.floating-button').hasClass('bg3')) {
+                        //     $('.floating-button').removeClass('bg3');
+                        //     $('.floating-button').addClass('bg4');
 
-                            $('#buttonsViewport').removeClass('bg3');
-                            $('#buttonsViewport').addClass('bg4');
-                        }  
-                        else if ($('.floating-button').hasClass('bg4')) {
-                            $('.floating-button').removeClass('bg4');
-                            $('.floating-button').addClass('bg1');
+                        //     $('#buttonsViewport').removeClass('bg3');
+                        //     $('#buttonsViewport').addClass('bg4');
+                        // }  
+                        // else if ($('.floating-button').hasClass('bg4')) {
+                        //     $('.floating-button').removeClass('bg4');
+                        //     $('.floating-button').addClass('bg1');
 
-                            $('#buttonsViewport').removeClass('bg4');
-                            $('#buttonsViewport').addClass('bg1');
-                        }                        
+                        //     $('#buttonsViewport').removeClass('bg4');
+                        //     $('#buttonsViewport').addClass('bg1');
+                        // }                        
                     } 
                     // if place data has been looped more than 4 times, get next place
                     else if (can_change_year) {
