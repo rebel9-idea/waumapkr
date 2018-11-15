@@ -76,7 +76,8 @@ body {
   display: none;
 }
 html * {
-  /*cursor: none*/
+  cursor: auto;
+  cursor: url("../media/cursor_1x.png") 10 -50, auto;
 }
 
 /***/
@@ -286,7 +287,8 @@ html * {
   font-style:italic;
   display: block;
   line-height: inherit;
-  cursor: pointer;
+  cursor: auto;
+  cursor: url("../media/pointer_1x.png") 10 -50, auto;
 }
 .about_close {
   left:auto;
