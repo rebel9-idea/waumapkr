@@ -342,6 +342,9 @@ html * {
 }
 .about a {
   color:black;
+  cursor: auto;
+  cursor: url("../media/pointer_1x.png") 10 -50, auto;
+
 }
 
 .loading {
