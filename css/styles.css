@@ -297,6 +297,7 @@ html * {
 .about_trigger span, .about_close span {
   height: 17px;
   display: block;
+  pointer-events: none;
 }
 
 .wrapper_about {
